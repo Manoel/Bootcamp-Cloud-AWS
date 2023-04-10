@@ -1,0 +1,23 @@
+
+Instalando o Linux (versão server)
+
+Ubuntu - Tem para usuario final e servidores
+
+Criando maquinas virtuais
+
+Instalando o virtual box
+
+antes de criar a maquina virtual no virtual box, executar o terminal em modo administrador, para verificar se a virtualização esta instalada e configurada na maquina windows.
+
+comando bcdedit
+
+verificar este: hypervisorlaunchtype está off, se tiver off, digitar bcdedit /set hypervisorlaunchtype off
+
+
+----------------------------------------
+
+Rebootar a maquina Linux: reboot
+desligar a maquina Linux: shutdown 0 (desliga agora)
+Para desligar sem ter que bootar novamente, podemos fechar a maquina no fechar da janela e clicar em Salvar estado da maquina.
+
+

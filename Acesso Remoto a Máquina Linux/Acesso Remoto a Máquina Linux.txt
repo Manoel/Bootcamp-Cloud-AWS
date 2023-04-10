@@ -1,0 +1,92 @@
+Acesso Remoto a Máquina Linux
+
+
+Comando para saber o IP da maquina
+
+ip a --> exibe todos os ips deste computador.
+
+Obs: A rede deve estar em modo bridge
+
+Instalando o serviço openssh
+
+apt-get install openssh-server
+------------------------------------------------
+
+Acesso remoto via Linux
+
+ssh nomeusuario@ipdamaquina
+
+confirma com yes.
+
+-----------------------------------------
+
+Acessando uma máquina virtual em nuvem (Putty)
+
+
+Logar na AWS
+Instancias em execução
+Endereço IPv4 público (copiar este)
+
+Acesso pelo windows via Putty
+
+Para acessar a maquina virtual na nuvem, é preciso do certificado baixado (chaves), o putty não trabalha com o formato "pem"
+e sim com o formato ppk.
+
+Tenho que converter o formato pem em ppk, via puttygen.
+
+Como fazer:
+
+abrir o Puttygen
+
+clicar no botão "Load", e buscar o arquivo .pem
+clickar no botão "Save private key" (sim), ele vai salvar no formato .ppk
+
+Como atribuir o arquivo .ppk salvo no Putty:
+
+abrir o Putty, ir em Connection/Auth, clicar no botão "Browser", volto para Session e colocar o ip da maquina virtual na nuvem, clicar no botão "Open".
+
+Usuario padrão para acesso: ubuntu
+Não precisa de senha, pois já importamos a chave.
+
+-------------------------------------------------------
+
+Acessando uma máquina virtual em nuvem (ssh)
+
+Ter o certificado na extensão .pem
+
+no terminal da maquina Linux, passar o comando abaixo
+ssh -i Nomedoarquivo.pem usuario@ipdamaquinananuvem  
+confirma com yes
+
+Caso ocorra o erro de: "WARNING: UNPROTECTED PRIVATE KEY FILE!"
+
+Como resolver: 
+
+Mudar as permissões do arquivo
+
+comando: sudo chmod nomedoarquivo.pem
+
+--------------------------------------------------------
+
+Excluindo uma instância na AWS
+
+
+Logado na AWS, ir em instancias, selecionar a instancia a ser excluida, ir no botão "Estado da instancia", e clicar em Encerrar instância
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
